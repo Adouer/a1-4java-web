@@ -8,6 +8,7 @@ import com.adouer.a14javaweb.service.impl.NewsServiceImpl;
 import com.adouer.a14javaweb.util.CKEditorUtil;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +17,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
-@WebServlet(name = "CommentAddServlet", value = "/CommentAddServlet")
+@WebServlet(name = "CommentAddServlet", value = "/CommentAddServlet",initParams = {@WebInitParam(name = "addCommentScore",value = "2")})
 public class CommentAddServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;

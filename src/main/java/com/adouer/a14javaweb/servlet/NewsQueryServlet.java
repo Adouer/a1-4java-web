@@ -7,11 +7,12 @@ import com.adouer.a14javaweb.vo.NewsPage;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet(name = "NewsQueryServlet", value = "/NewsQueryServlet")
+@WebServlet(name = "NewsQueryServlet", value = "/NewsQueryServlet",initParams = {@WebInitParam(name = "pageSize",value = "10")})
 public class NewsQueryServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;

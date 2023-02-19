@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "NewsInitServlet", value = "/NewsInitServlet")
+@WebServlet(name = "NewsInitServlet", value = "/NewsInitServlet",loadOnStartup =1)
 public class NewsInitServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
